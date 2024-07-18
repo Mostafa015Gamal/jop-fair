@@ -3,14 +3,13 @@ let inputAmountAndDate = document.getElementById("inputAmountAndDate");
 let tfoot = document.getElementById("tfoot");
 let result = [];
 const ctx = document.getElementById("myChart");
-// https://my-json-server.typicode.com/your-username/your-repo/customers
+
 async function getData() {
   let data = await fetch(
     "https://my-json-server.typicode.com/Mostafa015Gamal/jop-fair/customers?_embed=transactions"
   );
   result = await data.json();
 
-  console.log(result);
   displayData(result);
   localStorage.setItem("data", JSON.stringify(result));
 }
@@ -77,15 +76,13 @@ inputAmountAndDate.addEventListener("input", function (e) {
 let chart;
 function displayChart(dataChart) {
   chart?.destroy?.();
-  console.log(dataChart);
   let labels = dataChart.transactions.map((el) => el.date);
   let amount = dataChart.transactions.map((el) => el.amount);
-  console.log(labels);
   const data = {
     labels: labels,
     datasets: [
       {
-        label: dataChart.name,
+        label: `${dataChart.name}'s Transactions Amount`,
         data: amount,
         fill: false,
         borderColor: "rgb(75, 192, 192)",
@@ -106,3 +103,5 @@ function displayChart(dataChart) {
     },
   });
 }
+
+// https://my-json-server.typicode.com/your-username/your-repo/customers
