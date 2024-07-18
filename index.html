@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="text-primary m-auto text-center mt-5">
+      Customers Transactions Dashboard
+    </h1>
+    <div class="container divInputs p-0">
+      <div class="row gy-3">
+        <div class="col-md-12">
+          <input
+            type="text"
+            class="w-25 py-2 px-2 me-2 w-100"
+            placeholder="Search By Name"
+            id="inputName"
+          />
+        </div>
+        <div class="col-md-12">
+          <input
+            type="text"
+            class="w-25 py-2 px-2 w-100"
+            placeholder="Search By (Amount & LastDate)"
+            id="inputAmountAndDate"
+          />
+        </div>
+      </div>
+    </div>
+
+    <table class="container bg-light text-center mt-4 mb-5 border-1">
+      <thead class="fw-bold">
+        <tr>
+          <td class="w-25">ID</td>
+          <td class="w-25">NAME</td>
+          <td>LAST AMOUNT</td>
+          <td>LAST DATE</td>
+        </tr>
+      </thead>
+      <tbody id="tableData"></tbody>
+      <tfoot class="d-none" id="tfoot">
+        <tr>
+          <td colspan="4" class="py-4">No data To show at the moment</td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class="m-auto mb-5 div-chart">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
