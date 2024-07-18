@@ -3,9 +3,11 @@ let inputAmountAndDate = document.getElementById("inputAmountAndDate");
 let tfoot = document.getElementById("tfoot");
 let result = [];
 const ctx = document.getElementById("myChart");
-
+// https://my-json-server.typicode.com/your-username/your-repo/customers
 async function getData() {
-  let data = await fetch("http://localhost:3000/customers?_embed=transactions");
+  let data = await fetch(
+    "https://my-json-server.typicode.com/Mostafa015Gamal/jop-fair/customers?_embed=transactions"
+  );
   result = await data.json();
 
   console.log(result);
