@@ -216,18 +216,6 @@
     "id": 29,
     "customerId": 10,
     "date": "2022-02-01",
-    "amount": 3000
-    },
-    {
-    "id": 30,
-    "customerId": 10,
-    "date": "2022-02-15",
-    "amount": 1000
-    },
-    {
-    "id": 31,
-    "customerId": 10,
-    "date": "2022-03-01",
     "amount": 7000
     }
     ]
